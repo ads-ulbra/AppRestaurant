@@ -10,6 +10,8 @@ namespace AppRestaurant.Configuration
 
         }
 
-        public DbSet<Restaurant> Restaurant { get; set; }
+        public DbSet<Restaurant> restaurant { get; set; }
+
+        public DbSet<RestaurantConsumption> restaurantConsumption { get; set; }
     }
 }

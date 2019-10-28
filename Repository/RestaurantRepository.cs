@@ -16,24 +16,24 @@ namespace AppRestaurant.Repository
 
         public void Create(Restaurant restaurant)
         {
-            context.Restaurant.Add(restaurant);
+            context.restaurant.Add(restaurant);
             context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            context.Restaurant.Remove(GetById(id));
+            context.restaurant.Remove(GetById(id));
             context.SaveChanges();
         }
 
         public List<Restaurant> GetAll()
         {
-            return context.Restaurant.ToList();
+            return context.restaurant.ToList();
         }
 
         public Restaurant GetById(int id)
         {
-            return context.Restaurant.SingleOrDefault(restaurant => restaurant.id == id);
+            return context.restaurant.SingleOrDefault(restaurant => restaurant.id == id);
         }
 
         public void Update(Restaurant restaurant)
