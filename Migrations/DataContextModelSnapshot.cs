@@ -34,7 +34,7 @@ namespace AppRestaurant.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Restaurant");
+                    b.ToTable("restaurant");
                 });
 
             modelBuilder.Entity("AppRestaurant.Models.RestaurantConsumption", b =>

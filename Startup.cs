@@ -45,6 +45,7 @@ namespace AppRestaurant
 
             // Injection dependence
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+            services.AddScoped<IRestaurantConsumptionRepository, RestaurantConsumptionRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
