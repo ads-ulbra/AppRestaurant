@@ -1,0 +1,40 @@
+@model IEnumerable<AppRestaurant.Models.Restaurant>
+
+<br></br>
+<a href="Create" class="btn btn-primary"> New Restaurant </a>
+<br></br>
+
+<div class="container">
+    <fieldset>
+        <legend>
+            <label>List of Restaurants</label>
+        </legend>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Number</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.name</td>
+                    <td>@item.address</td>
+                    <td>@item.number</td>
+                    <td>@item.city</td>
+                    <td>@item.state</td>
+                    <td><a class="btn btn-primary" href="Restaurant/Edit/@item.id">Update</td>
+                    <td><a class="btn btn-danger" href="Restaurant/Delete/@item.id">Delete</td>
+                </tr>
+            }
+        </table>
+    </fieldset>  
+</div>

@@ -1,0 +1,36 @@
+@model AppRestaurant.Models.Restaurant;
+
+<div class="form-horizontal">
+    <form action="Edit" method="Post">
+
+        <input type="hidden" name="id" value="@Model.id"/>   
+
+        <div class="form-group">
+            <label>Name</label>
+            <input  class="form-control" type="text" name="name" value="@Model.name"/>
+        </div>
+
+        <div class="form-group">
+            <label>Address</label>
+            <input  class="form-control" type="text" name="address" value="@Model.address"/>
+        </div>
+
+        <div class="form-group">
+            <label>Number</label>
+            <input  class="form-control" type="text" name="number" value="@Model.number"/>
+        </div>
+
+        <div class="form-group">
+            <label>City</label>
+            <input  class="form-control" type="text" name="city" value="@Model.city"/>
+        </div>
+
+        <div class="form-group">
+            <label>State</label>
+            <input  class="form-control" type="text" name="state" value="@Model.state"/>
+        </div>
+
+        <input  class="btn btn-primary" type="submit" value="Save"/>
+
+    </form>
+</div>
